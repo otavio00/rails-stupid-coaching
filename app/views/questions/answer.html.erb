@@ -1,0 +1,26 @@
+<div class="container">
+
+  <h1>Stupid Coaching</h1>
+
+  <div class = "box" id="question">
+    <h5><%=@answer%></h5>
+    <p>-You</p>
+  </div>
+
+  <div class = "box" id="answer">
+    <h4>
+    <%if @answer == "I am going to work"%>
+      <%="Great!"%>
+    <%elsif @answer.end_with?("?")%>
+      <%="Silly question, get dressed and go to work!"%>
+    <%else%>
+      <%="I don't care, get dressed and go to work!"%>
+    <%end%>
+    </h4>
+    <p>-Your Coach</p>
+  </div>
+
+  <div>
+    <%= link_to "Ask a new question", "/ask", class: "new-question" %>
+  </div>
+</div>
